@@ -2,8 +2,6 @@ function solution(players, callings) {
   var answer = [];
   let map = new Map();
   players.forEach((d, i) => map.set(d, i));
-  console.log(players);
-  console.log(callings);
   callings.forEach(data => {
     let curIdx = map.get(data);
     let curPlayer = players[curIdx];
@@ -13,6 +11,11 @@ function solution(players, callings) {
     map.set(curPlayer, curIdx - 1);
     map.set(prevPlayer, curIdx);
   });
-  return answer;
+  return players;
 }
-console.log(solution(["A", "B", "C", "D", "E"], ["B", "D", "E", "E"]));
+console.log(
+  solution(
+    ["mumu", "soe", "poe", "kai", "mine"],
+    ["kai", "kai", "mine", "mine"]
+  )
+);
