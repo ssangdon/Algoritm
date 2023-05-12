@@ -1,13 +1,19 @@
 const SelectionSort = arr => {
   let arrs = arr;
   for (var i = 0; i < arrs.length; i++) {
-    for (var k = i + 1; k < arrs.length; k++) {
-      if (arrs[i] > arrs[k]) {
-        let tmp = arrs[k];
-        arrs[k] = arrs[i];
-        arrs[i] = tmp;
+    let min = 9999;
+    let idx = 0;
+    let tmp;
+    for (var k = i; k < arrs.length; k++) {
+      if (min > arrs[k]) {
+        min = arrs[k];
+        idx = k;
       }
     }
+
+    tmp = arrs[i];
+    arrs[i] = min;
+    arrs[idx] = tmp;
   }
   console.log(arrs);
 };
