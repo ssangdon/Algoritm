@@ -77,10 +77,8 @@ const a = new Heap();
 a.insert(1);
 a.insert(2);
 a.insert(3);
-a.insert(4);
-a.insert(5);
-a.insert(6);
-a.insert(7);
-a.delete();
+a.insert(9);
+a.insert(10);
+a.insert(12);
 
 console.log(a.heap);
