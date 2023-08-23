@@ -79,6 +79,7 @@ a.insert(2);
 a.insert(3);
 a.insert(9);
 a.insert(10);
+a.insert(100);
 a.insert(12);
 
 console.log(a.heap);
