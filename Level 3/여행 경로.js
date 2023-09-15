@@ -24,3 +24,27 @@ function solution(tickets) {
   re("ICN", 0, []);
   return answer;
 }
+//
+function solution(tickets) {
+  var answer = [];
+  let answerLen = tickets.length + 1;
+  tickets.sort();
+  let q = ["ICN"];
+  let obj = {};
+  const back = arr => {
+    if (q.length === answerLen) {
+      answer.push(...q);
+      return;
+    }
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i][0] === q.at(-1)) {
+        q.push(arr[i][1]);
+        let newArr = [...arr.slice(0, i), ...arr.slice(i + 1)];
+        back(newArr);
+        q.pop();
+      }
+    }
+  };
+  back(tickets);
+  return answer.slice(0, answerLen);
+}
