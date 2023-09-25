@@ -16,7 +16,8 @@ class BinaryTree {
       } else {
         this.right.pushNode(value);
       }
-    } else if (this.value > value) {
+    } // 입력값이 부모노드보다 작은 경우
+    else if (this.value > value) {
       if (this.left === null) {
         this.left = new BinaryTree(value);
       } else {
