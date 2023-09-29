@@ -15,6 +15,7 @@ function solution(a) {
 
 function count(arr, value) {
   let count = 0;
+  let a = 0;
   for (let i = 0; i < arr.length - 1; i++) {
     if (arr[i] !== value && arr[i + 1] !== value) continue;
     if (arr[i] === arr[i + 1]) continue;
