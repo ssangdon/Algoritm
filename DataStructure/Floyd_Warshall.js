@@ -34,6 +34,7 @@ const Floyd_Warshall = (N, arr) => {
       numArr.slice().filter(d => d !== i),
       2
     );
+    console.log(filtered);
     filtered.map((data, idx) => {
       let [x, y] = data;
       graph[x][y] = Math.min(graph[x][y], graph[x][i] + graph[i][y]);
