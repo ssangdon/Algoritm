@@ -28,7 +28,6 @@ function solution(info, edges) {
   });
   const dfs = (node, sheep, wolf, possible) => {
     answer = Math.max(sheep, answer);
-    console.log(possible, node);
     if (sheep <= wolf) return;
     let needVisit = [...possible, ...tree[node]];
     needVisit.splice(possible.indexOf(node), 1);
