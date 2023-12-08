@@ -16,10 +16,6 @@
 
 function solution(info, edges) {
   var answer = 0;
-  let root = 0;
-  let sheep = 0;
-  let wolf = 0;
-  let result = [];
   let tree = Array.from(Array(info.length), () => Array(0));
   edges.sort((a, b) => a[0] - b[0]);
   edges.forEach(d => {
