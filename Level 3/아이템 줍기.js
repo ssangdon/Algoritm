@@ -27,13 +27,9 @@ function solution(rectangle, characterX, characterY, itemX, itemY) {
   let times = 0;
   let ansArr = [];
   while (queue.length) {
-    // console.log(queue)
     let [x, y] = queue.shift();
     if (x === endX && y === endY) {
-      // console.log(times);
       ansArr.push(Math.ceil(times / 2));
-      // queue.shift();
-      // visited = Array.from(Array(101),()=>Array(101).fill(0));
       times = 0;
     } else {
       if (board[x][y] === 1) {
