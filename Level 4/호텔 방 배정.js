@@ -16,5 +16,6 @@ function solution(k, room_number) {
     let number = findRoom(room_number[i], room);
     answer.push(number);
   }
+  
   return answer;
 }
