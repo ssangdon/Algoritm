@@ -6,6 +6,7 @@ function solution(n, times) {
   while (l <= r) {
     let mid = Math.floor((l + r) / 2);
     let count = 0;
+    let top = 0;
     times.forEach(data => {
       count += Math.floor(mid / data);
     });
