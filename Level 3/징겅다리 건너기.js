@@ -5,7 +5,7 @@
 function solution(stones, k) {
   var answer = 0;
   let l = 1;
-  let r = 200000000;
+  let r = 200000001;
   while (l <= r) {
     let mid = Math.floor((l + r) / 2);
     let count = 0;
